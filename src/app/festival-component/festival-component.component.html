@@ -1,8 +1,10 @@
-<ul *ngFor=" let festival of festivals | async">
-  <li> {{festival.recordid}}} <br>
-        {{festival.datasetid}} <br>
+<div class="wrapper" >
+  <div *ngFor=" let festival of festivals | async" class="festival">
+    {{festival.recordid}} <br>
+    {{festival.datasetid}} <br>
     {{festival.fields.nom_du_festival}} <br>
     {{festival.geometry}} <br>
-    {{festival.record_timestamp}} <br><br><br>
-  </li>
-</ul>
+    {{festival.record_timestamdiv}}
+  </div>
+</div>
+

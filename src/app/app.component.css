@@ -1,0 +1,48 @@
+html{
+  background-color: black;
+  color: aliceblue;
+  overflow: hidden;
+}
+header,footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+footer {
+  margin-top: 5%;
+}
+#head {
+  height: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 10%;
+  width: 30%;
+}
+
+button{
+  color: aliceblue;
+  background-color: black;
+  border: hidden;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#Connection{
+  background-color: cadetblue;
+}
+
+body{
+  margin-top: 3%;
+  margin-left: 5%;
+}
+
+#foot1 {
+  font-weight: bold;
+  width: 50%;
+}
+
+#foot2 {
+  font-style: italic;
+}

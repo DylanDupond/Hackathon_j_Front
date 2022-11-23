@@ -1,0 +1,10 @@
+.wrapper{
+  grid-template-columns: repeat(3, 1fr);
+  display:grid;
+  grid-gap: 1em 20px;
+}
+.festival {
+  box-shadow: 5px 5px 5px palevioletred;
+  background-color: #252727;
+  width: 90%;
+}
