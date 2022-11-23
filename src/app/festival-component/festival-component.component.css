@@ -4,7 +4,15 @@
   grid-gap: 1em 20px;
 }
 .festival {
-  box-shadow: 5px 5px 5px palevioletred;
+  box-shadow: 5px 5px 5px #b1003f;
   background-color: #252727;
   width: 90%;
+}
+.categoryIndic{
+  font-weight: bold;
+  color: #b1003f;
+}
+#pagination {
+  margin-top: 2%;
+  width: 97%;
 }

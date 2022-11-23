@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import {ReactiveFormsModule} from "@angular/forms";
+import {NgxPaginationModule} from "ngx-pagination";
+
 
 //Angularfire imports
 import {AngularFireModule} from "@angular/fire/compat";
@@ -26,7 +28,8 @@ import { FestivalComponentComponent } from './festival-component/festival-compon
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    NgxPaginationModule
   ],
   providers: [FestivalService],
   bootstrap: [AppComponent]

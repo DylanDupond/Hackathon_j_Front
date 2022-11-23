@@ -1,10 +1,23 @@
 <div class="wrapper" >
-  <div *ngFor=" let festival of festivals | async" class="festival">
-    {{festival.recordid}} <br>
-    {{festival.datasetid}} <br>
-    {{festival.fields.nom_du_festival}} <br>
-    {{festival.geometry}} <br>
-    {{festival.record_timestamdiv}}
+  <div *ngFor="let festival of fields | paginate:{
+        itemsPerPage : tableSize,
+        currentPage:page,
+        totalItems:count
+        }; let i =index" class="festival">
+    <span class="categoryIndic">Name :</span>{{fields.nom_du_fields}} <br>
+    <span class="categoryIndic">Website :</span>><a>{{fields.site_internet_du_festival}} </a> <br>
+    <span class="categoryIndic">Period : </span>{{fields.periode_principale_de_deroulement_du_festival}} <br>
+    <span class="categoryIndic">Department :</span>{{fields.departement_principal_de_deroulement}} <br>
+    <span class="categoryIndic">City :</span>{{fields.commune_principale_de_deroulement}} <br>
+    <span class="categoryIndic">Postal Code :</span>{{fields.code_postal_de_la_commune_principale_de_deroulement}}
   </div>
 </div>
+<div id="pagination">
+  <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="OnDataChange($event)">
+  </pagination-controls>
+</div>
+
 
