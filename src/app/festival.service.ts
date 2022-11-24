@@ -19,4 +19,5 @@ export class FestivalService {
       .list<Festival>('/')
       .valueChanges();
   }
+
 }

@@ -1,13 +1,15 @@
 .wrapper{
-  margin-top: 6%;
+  margin-top: 3%;
   grid-template-columns: repeat(3, 1fr);
   display:grid;
-  grid-gap: 1em 20px;
+  grid-gap: 2em 20px;
+  margin-left: 3%;
 }
 .festival {
   box-shadow: 5px 5px 5px #b1003f;
   background-color: #252727;
   width: 90%;
+  height: 100%;
 }
 .categoryIndic{
   font-weight: bold;
@@ -15,5 +17,25 @@
 }
 #pagination {
   margin-top: 2%;
-  width: 97%;
+  margin-left: 3%;
+  width: 94%;
+}
+
+#searchbar {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 4%;
+  color: aliceblue;
+}
+
+.selected{
+  box-shadow: 5px 5px 5px cadetblue;
+  background-color: #252727;
+  width: 90%;
+  height: 100%;
+}
+
+#Select{
+  margin-left: 40%;
+  position: relative;
 }

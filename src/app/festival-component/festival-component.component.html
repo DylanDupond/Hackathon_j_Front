@@ -1,16 +1,21 @@
+<input id="searchbar" autofocus [(ngModel)]="searchText"  type="text"
+       name="search" placeholder="Search festival">
+
 <div class="wrapper" >
   <div *ngFor="let festival of festivals | paginate :{
         itemsPerPage : tableSize,
         currentPage:page,
         totalItems:count
-        }; let i =index"
-       class="festival">
+        } | filter:searchText; let i =index">
+    <div [ngClass]="festival === currentSelected? 'selected': 'festival'">
     <span class="categoryIndic">Name :</span>{{festival.fields.nom_du_festival}} <br>
     <span class="categoryIndic">Website :</span>><a>{{festival.fields.site_internet_du_festival}} </a> <br>
     <span class="categoryIndic">Period : </span>{{festival.fields.periode_principale_de_deroulement_du_festival}} <br>
     <span class="categoryIndic">Department :</span>{{festival.fields.departement_principal_de_deroulement}} <br>
     <span class="categoryIndic">City :</span>{{festival.fields.commune_principale_de_deroulement}} <br>
-    <span class="categoryIndic">Postal Code :</span>{{festival.fields.code_postal_de_la_commune_principale_de_deroulement}}
+    <span class="categoryIndic">Postal Code :</span>{{festival.fields.code_postal_de_la_commune_principale_de_deroulement}}<br>
+    </div>
+    <button id="Select" (click)="selectFestival(festival)"> Select</button>
   </div>
 </div>
 <div id="pagination">

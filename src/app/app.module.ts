@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgxPaginationModule} from "ngx-pagination";
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 //Angularfire imports
@@ -29,7 +31,9 @@ import { FestivalComponentComponent } from './festival-component/festival-compon
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [FestivalService],
   bootstrap: [AppComponent]

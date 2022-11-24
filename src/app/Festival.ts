@@ -4,4 +4,5 @@ export interface Festival {
   geometry :object;
   record_timestamp : string;
   recordid : string;
+  isSelected : boolean;
 }

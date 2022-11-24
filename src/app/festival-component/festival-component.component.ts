@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import {FestivalService} from "../festival.service";
+import {Festival} from "../Festival";
 
 @Component({
   selector: 'app-festival-component',
@@ -12,10 +13,11 @@ export class FestivalComponentComponent{
   page:number=1;
   count:number=0;
   tableSize:number=9;
-  constructor(private realTimeDatabase: FestivalService) {
-  }
+  searchText:any;
+  currentSelected : Festival | undefined;
+  constructor(private realTimeDatabase: FestivalService) {}
 
-  ngOnInit():void{
+ ngOnInit():void{
     this.GetData();
   }
   GetData(){
@@ -25,5 +27,20 @@ export class FestivalComponentComponent{
   OnDataChange(event:any){
     this.page = event;
     this.GetData();
+  }
+
+  //Festival selection
+  selectFestival(fest :Festival){
+    if (!this.currentSelected === undefined)
+    { // @ts-ignore
+      this.currentSelected.isSelected =false;
+      fest.isSelected = true;
+      this.currentSelected = fest;
+    }
+    else {
+      fest.isSelected = true;
+      this.currentSelected = fest;
+    }
+
   }
 }
