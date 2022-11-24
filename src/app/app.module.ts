@@ -14,11 +14,19 @@ import {environment} from "../environments/environment";
 import { AppComponent } from './app.component';
 import {FestivalService} from "./festival.service";
 import { FestivalComponentComponent } from './festival-component/festival-component.component';
+import { HomeComponent } from './components/home/home.component';
+import { LandingComponent } from './components/landing/landing.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FestivalComponentComponent
+    FestivalComponentComponent,
+    HomeComponent,
+    LandingComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
