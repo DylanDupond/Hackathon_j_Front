@@ -7,10 +7,11 @@ import {NgxPaginationModule} from "ngx-pagination";
 
 //Angularfire imports
 import {AngularFireModule} from "@angular/fire/compat";
-import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
+import {AngularFirestore, AngularFirestoreModule} from "@angular/fire/compat/firestore";
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { AuthenticationService } from './services/authentication.service';
 
 //Environnment import
 import {environment} from "../environments/environment";
@@ -19,7 +20,6 @@ import { AppComponent } from './app.component';
 import {FestivalService} from "./festival.service";
 import { FestivalComponentComponent } from './festival-component/festival-component.component';
 import { HomeComponent } from './components/home/home.component';
-import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { provideAuth } from '@angular/fire/auth';
@@ -31,7 +31,6 @@ import { getAuth } from 'firebase/auth';
     AppComponent,
     FestivalComponentComponent,
     HomeComponent,
-    LandingComponent,
     LoginComponent,
     SignUpComponent
   ],
@@ -46,7 +45,7 @@ import { getAuth } from 'firebase/auth';
     AngularFireDatabaseModule,
     NgxPaginationModule
   ],
-  providers: [FestivalService],
+  providers: [FestivalService, AuthenticationService, AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
