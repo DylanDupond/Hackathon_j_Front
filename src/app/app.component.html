@@ -9,7 +9,8 @@
       <button class="head">Find</button>
       <button class="head">Create</button>
       <button class="head">Info</button>
-      <button id="Connection" class="head" routerLink="login"> Sign in</button>
+      <button id="Connection" class="head" routerLink="login" *ngIf="router.url !== '/festivals'"> Sign in</button>
+      <button id="Connection" class="head" routerLink="login" *ngIf="router.url === '/festivals'"> Sign out</button>
     </div>
   </header>
 
