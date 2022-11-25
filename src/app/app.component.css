@@ -16,10 +16,10 @@ footer {
   height: 4%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-left: 10%;
   margin-top: 2%;
-  width: 30%;
+  width: 50%;
 }
 
 button{
@@ -28,10 +28,6 @@ button{
   border: hidden;
   font-size: x-large;
   font-weight: bold;
-}
-
-#Connection{
-  background-color: cadetblue;
 }
 
 body{
