@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgxPaginationModule} from "ngx-pagination";
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 //Angularfire imports
@@ -19,17 +21,18 @@ import {environment} from "../environments/environment";
 import { AppComponent } from './app.component';
 import {FestivalService} from "./festival.service";
 import { FestivalComponentComponent } from './festival-component/festival-component.component';
+import { FormOperationDBComponent } from './form-operation-db/form-operation-db.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { provideAuth } from '@angular/fire/auth';
 import { getAuth } from 'firebase/auth';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     FestivalComponentComponent,
+    FormOperationDBComponent
     HomeComponent,
     LoginComponent,
     SignUpComponent
@@ -43,7 +46,9 @@ import { getAuth } from 'firebase/auth';
     provideAuth (()=>getAuth()),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule,
+    Ng2SearchPipeModule,
   ],
   providers: [FestivalService, AuthenticationService, AngularFirestore],
   bootstrap: [AppComponent]

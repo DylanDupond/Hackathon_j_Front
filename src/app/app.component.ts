@@ -10,6 +10,8 @@ import {FestivalService} from "./festival.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+ /** update =false;
+  create=false;*/
   title = 'hackathon_web';
 
   constructor (public router: Router){}

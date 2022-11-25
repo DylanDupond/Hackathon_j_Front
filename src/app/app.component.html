@@ -4,18 +4,17 @@
   <meta charset=UTF-8>
   <title>Festival Manager</title>
 </head>
-  <header>
+<body>
+  <header class="elements">
     <div id="head">
-      <button class="head">Find</button>
+      <button class="head" >Find</button>
       <button class="head">Create</button>
       <button class="head">Info</button>
       <button id="Connection" class="head" routerLink="login" *ngIf="router.url !== '/festivals'"> Sign in</button>
       <button id="Connection" class="head" routerLink="login" *ngIf="router.url === '/festivals'"> Sign out</button>
     </div>
   </header>
-
   <router-outlet></router-outlet>
-
   <footer>
     <div>
       <p id="foot1">
