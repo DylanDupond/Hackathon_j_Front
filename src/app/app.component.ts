@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import {Observable} from "rxjs";
+import {Festival} from "./Festival";
+import {FestivalService} from "./festival.service";
 
 @Component({
   selector: 'app-root',
@@ -10,12 +14,5 @@ export class AppComponent {
   create=false;*/
   title = 'hackathon_web';
 
-  /**updateMode(){
-    this.create=false
-    this.update=true;
-  }
-  createMode(){
-    this.create=true;
-    this.update=false;
-  }**/
+  constructor (public router: Router){}
 }
