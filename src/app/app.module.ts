@@ -32,7 +32,7 @@ import { getAuth } from 'firebase/auth';
   declarations: [
     AppComponent,
     FestivalComponentComponent,
-    FormOperationDBComponent
+    FormOperationDBComponent,
     HomeComponent,
     LoginComponent,
     SignUpComponent
