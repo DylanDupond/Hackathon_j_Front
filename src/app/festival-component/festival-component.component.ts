@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import {FestivalService} from "../festival.service";
 import {Festival} from "../Festival";
+import {TicketState} from "../TicketState";
 
 @Component({
   selector: 'app-festival-component',
@@ -15,13 +16,15 @@ export class FestivalComponentComponent{
   tableSize:number=9;
   searchText:any;
   currentSelected : Festival | undefined;
+  modif :boolean = false;
   constructor(private realTimeDatabase: FestivalService) {}
 
  ngOnInit():void{
     this.GetData();
   }
   GetData(){
-    this.realTimeDatabase.getFestival().subscribe((res) => {this.festivals = res;})
+    this.realTimeDatabase.getFestival().subscribe((res) =>
+    {res.map((elm: { id: any; })=>elm.id=res.indexOf(elm));this.festivals = res;})
   }
 
   OnDataChange(event:any){
@@ -41,6 +44,14 @@ export class FestivalComponentComponent{
       fest.isSelected = true;
       this.currentSelected = fest;
     }
+  }
 
+  ModifyFestival(festival: any) {
+    this.realTimeDatabase.toChange = festival;
+    if(!this.realTimeDatabase.toChange.hasOwnProperty('TicketNumber')){
+    this.realTimeDatabase.toChange.TicketNumber=0;}
+    if(!this.realTimeDatabase.toChange.hasOwnProperty('Sales')){
+    this.realTimeDatabase.toChange.Sales= TicketState.Close;}
+    this.modif=true;
   }
 }

@@ -18,11 +18,13 @@ import {environment} from "../environments/environment";
 import { AppComponent } from './app.component';
 import {FestivalService} from "./festival.service";
 import { FestivalComponentComponent } from './festival-component/festival-component.component';
+import { FormOperationDBComponent } from './form-operation-db/form-operation-db.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FestivalComponentComponent
+    FestivalComponentComponent,
+    FormOperationDBComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,7 @@ import { FestivalComponentComponent } from './festival-component/festival-compon
     AngularFireDatabaseModule,
     NgxPaginationModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
   ],
   providers: [FestivalService],
   bootstrap: [AppComponent]

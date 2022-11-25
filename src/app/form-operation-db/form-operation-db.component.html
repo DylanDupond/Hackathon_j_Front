@@ -1,0 +1,92 @@
+<form  class="UpdateForm" #myform = "ngForm" (ngSubmit) = "onSubmitUpdate(myform)" >
+  <div class="FormFields" >
+  <div *ngFor="let props of this.tab2">
+    <label> {{props[0]}}</label>
+    <input class="formWords" name="{{props[0]}}" [(ngModel)]="props[1]">
+  </div>
+  </div>
+  <input class="Send" type = "submit" value = "Send">
+</form>
+
+<form *ngIf="create" class="UpdateForm" #myform = "ngForm" (ngSubmit) = "onSubmitCreate(myform)" >
+  <div class="FormFields" >
+    <div>
+      <label>adresse_e_mail</label>
+      <input class="formWords" name="adresse_e_mail" >
+    </div>
+    <div>
+      <label>annee_de_creation_du_festival</label>
+      <input class="formWords" name="annee_de_creation_du_festival" >
+    </div>
+    <div>
+      <label>code_insee_commune</label>
+      <input class="formWords" name="code_insee_commune" >
+    </div>
+    <div>
+      <label>code_insee_epci_collage_en_valeur</label>
+      <input class="formWords" name="code_insee_epci_collage_en_valeur" >
+    </div>
+    <div>
+      <label>code_postal_de_la_commune_principale_de_deroulement</label>
+      <input class="formWords" name="code_postal_de_la_commune_principale_de_deroulement" >
+    </div>
+    <div>
+      <label>commune_principale_de_deroulement</label>
+      <input class="formWords" name="commune_principale_de_deroulement" >
+    </div>
+    <div>
+      <label>decennie_de_creation_du_festival</label>
+      <input class="formWords" name="decennie_de_creation_du_festival" >
+    </div>
+    <div>
+      <label>departement_principal_de_deroulement</label>
+      <input class="formWords" name="departement_principal_de_deroulement" >
+    </div><div>
+    <label>discipline_dominante</label>
+    <input class="formWords" name="discipline_dominante" >
+  </div><div>
+    <label>geolocalisation</label>
+    <input class="formWords" name="geolocalisation">
+  </div><div>
+    <label>identifiant</label>
+    <input class="formWords" name="identifiant" >
+  </div><div>
+    <label>libelle_epci_collage_en_valeur</label>
+    <input class="formWords" name="libelle_epci_collage_en_valeur" >
+  </div>
+    <div>
+      <label>nom_du_festival</label>
+      <input class="formWords" name="nom_du_festival" >
+    </div><div>
+    <label>incipale_de_deroulement_du_festival</label>
+    <input class="formWords" name="incipale_de_deroulement_du_festival" >
+  </div><div>
+    <label>region_principale_de_deroulement</label>
+    <input class="formWords" name="region_principale_de_deroulement" >
+  </div>
+    <div>
+      <label>site_internet_du_festival</label>
+      <input class="formWords" name="site_internet_du_festival" >
+    </div>
+    <div>
+      <label>datasetid</label>
+      <input class="formWords" name="datasetid">
+    </div>
+    <div>
+      <label>record_timestamp</label>
+      <input class="formWords" name="record_timestamp" >
+    </div><div>
+    <label>recordid</label>
+    <input class="formWords" name="recordid" >
+  </div>
+    <div>
+      <label>TicketNumber</label>
+      <input class="formWords" name="TicketNumber" >
+    </div><div>
+    <label>Sales</label>
+    <input class="formWords" name="Sales" >
+  </div>
+
+  </div>
+  <input id="Send" type = "submit" value = "Send">
+</form>

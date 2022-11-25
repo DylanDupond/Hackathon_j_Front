@@ -1,0 +1,27 @@
+.UpdateForm{
+  margin-top: 5%;
+  margin-left: 3%;
+}
+input{
+  margin-top: 3%;
+}
+.formWords{
+  background-color: aliceblue;
+}
+label{
+  color: #b1003f;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.Send {
+  margin-left: 45%;
+  width: 80px;
+  height: 80px;
+}
+.FormFields{
+  width :95%;
+  grid-template-columns: repeat(2, 1fr);
+  display:grid;
+  grid-gap: 2em 20px;
+}
